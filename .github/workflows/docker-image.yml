@@ -1,18 +1,13 @@
-name: Docker Image CI
+name: Update badges
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+  schedule:
+    # Runs at 0am UTC every day
+    - cron: "0 0 * * *"
 jobs:
-
-  build:
-
+  update-readme:
+    name: Update Readme with badges
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag Dr-A-Soni/Badges-Certificates
+      - name: Badges - Readme
+        uses: Dr-A-Soni/Badges-Certificates@main
