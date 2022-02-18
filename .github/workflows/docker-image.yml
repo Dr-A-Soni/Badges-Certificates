@@ -4,14 +4,15 @@ on:
   schedule:
     # Runs at 0am UTC every day
     - cron: "0 0 * * *"
+  
 jobs:
   update-readme:
     name: Update Readme with badges
     runs-on: ubuntu-latest
     steps:
-      - name: Badges - Readme
+      - name: Badges-Certificates
         uses: Dr-A-Soni/Badges-Certificates@main
-         with:
+        with:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           REPOSITORY: <username>/<username> # optional, By default, it will automatically use the repository who's executing the workflow.
           COMMIT_MESSAGE: "My commit message to update badges" # optional
