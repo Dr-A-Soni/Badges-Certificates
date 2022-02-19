@@ -1,6 +1,6 @@
 FROM python:latest
 
-WORKDIR /badges
+WORKDIR /Badges-Certificate
 
 # Install dependencies.
 ADD requirements.txt requirements.txt
