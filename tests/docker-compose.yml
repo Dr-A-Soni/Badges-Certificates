@@ -4,8 +4,8 @@ services:
     build: 
       context: ../
       dockerfile: tests/Dockerfile
-    container_name: tests-badge-readme
-    image: tests-badge-readme
+    container_name: tests-Badges-Certificate
+    image: tests-Badges-Certificate
     env_file:
      - .env.tests
     volumes:
