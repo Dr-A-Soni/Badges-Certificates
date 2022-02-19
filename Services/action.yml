@@ -6,7 +6,7 @@ inputs:
   GH_TOKEN:
     description: "GitHub access token with Repo scope"
     required: true
-    default: ${{ github.token }}
+    default: ${{ GH_TOKEN }}
 
   REPOSITORY:
     description: "Your GitHub repository"
